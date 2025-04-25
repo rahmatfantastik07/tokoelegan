@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Produk - TokoElegan</title>
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                TokoElegan
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="produk.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <!-- <li><a href="FAQ.html">FAQ</a></li> -->
+                <li><a href="live.html">Live-Chat</a></li>
+                <li><a href="kebijakan.html">Kebijakan</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li> <!-- Tombol Login disertakan di menu -->
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger Icon -->
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <a href="#home">Home</a> > <a href="#shop">Shop</a> > <span>Kategori Produk</span>
+    </section>
+
+    <div class="faq-page">
+        <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+
+        <div class="faq-item">
+            <h4 onclick="toggleAnswer(this)">🛒 Bagaimana cara memesan produk?</h4>
+            <p class="faq-answer">Pilih produk yang diinginkan, klik “Tambah ke Keranjang”, lalu lanjut ke halaman
+                checkout untuk menyelesaikan pembayaran.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 onclick="toggleAnswer(this)">📦 Berapa lama waktu pengiriman?</h4>
+            <p class="faq-answer">Waktu pengiriman tergantung lokasi Anda. Umumnya 2-5 hari kerja untuk wilayah
+                Indonesia.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 onclick="toggleAnswer(this)">🔁 Apakah bisa retur barang?</h4>
+            <p class="faq-answer">Ya, produk bisa diretur dalam waktu 7 hari setelah diterima, selama masih dalam
+                kondisi baru dan belum dipakai.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 onclick="toggleAnswer(this)">💳 Metode pembayaran apa yang tersedia?</h4>
+            <p class="faq-answer">Kami menerima transfer bank, kartu kredit, serta pembayaran digital seperti GoPay dan
+                OVO.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 onclick="toggleAnswer(this)">🧾 Apakah saya akan menerima bukti pembayaran?</h4>
+            <p class="faq-answer">Ya, bukti pembayaran akan dikirim ke email Anda setelah transaksi berhasil.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

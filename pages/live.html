@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Produk - TokoElegan</title>
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                TokoElegan
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="produk.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <!-- <li><a href="live.html">Live-Chat</a></li> -->
+                <li><a href="kebijakan.html">Kebijakan</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li> <!-- Tombol Login disertakan di menu -->
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger Icon -->
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <a href="#home">Home</a> > <a href="#shop">Shop</a> > <span>Kategori Produk</span>
+    </section>
+
+    <div class="chatbox-container" id="chatbox">
+        <div class="chat-header">
+            <span>Live Chat</span>
+            <button onclick="toggleChat()">X</button>
+        </div>
+        <div class="chat-body">
+            <div class="message">Halo! Ada yang bisa kami bantu?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Tulis pesan...">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </div>
+    <button class="chat-toggle" onclick="toggleChat()">💬 Chat dengan Kami</button>
+
+    <script>
+        let chatVisible = false;
+
+        function toggleChat() {
+            const chatbox = document.getElementById("chatbox");
+            chatVisible = !chatVisible;
+            chatbox.style.display = chatVisible ? "block" : "none";
+        }
+
+        function sendMessage() {
+            const chatInput = document.getElementById("chat-input");
+            const message = chatInput.value.trim();
+            if (message) {
+                const messageDiv = document.createElement("div");
+                messageDiv.classList.add("message");
+                messageDiv.textContent = `Anda: ${message}`;
+                document.querySelector(".chat-body").appendChild(messageDiv);
+                chatInput.value = ""; // Reset input field
+            }
+        }
+    </script>
+
+
+    <!-- Tawk.to Live Chat Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/xxxxxxxxxx/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Produk - TokoElegan</title>
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                TokoElegan
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="produk.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="live.html">Live-Chat</a></li>
+                <li><a href="kebijakan.html">Kebijakan</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="kontak.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li> <!-- Tombol Login disertakan di menu -->
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger Icon -->
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <a href="#home">Home</a> > <a href="#shop">Shop</a> > <span>Kategori Produk</span>
+    </section>
+
+    <div class="about-page">
+        <h2>Tentang Kami</h2>
+
+        <!-- Informasi Bisnis -->
+        <section class="about-section">
+            <h3>Siapa Kami?</h3>
+            <p>
+                Kami adalah <strong>TokoKita</strong>, sebuah toko online yang menjual berbagai produk fashion
+                berkualitas dengan harga terjangkau.
+                Mulai dari kaos polos, celana jeans, hingga aksesori kekinian.
+            </p>
+
+            <h3>Visi & Misi</h3>
+            <p>
+                <strong>Visi:</strong> Menjadi platform e-commerce terbaik yang menyediakan produk berkualitas dan
+                pelayanan terbaik untuk semua orang.<br>
+                <strong>Misi:</strong> Memberikan kemudahan belanja online dengan pelayanan cepat, aman, dan terpercaya.
+            </p>
+        </section>
+
+        <!-- Kontak -->
+        <section class="contact-section">
+            <h3>Hubungi Kami</h3>
+            <p>Email: <a href="mailto:cs@tokokita.com">cs@tokokita.com</a></p>
+            <p>Telepon: <a href="tel:+6281234567890">+62 812-3456-7890</a></p>
+
+            <h4>Formulir Kontak</h4>
+            <form onsubmit="sendContact(event)">
+                <input type="text" id="name" placeholder="Nama Anda" required>
+                <input type="email" id="email" placeholder="Email Anda" required>
+                <textarea id="message" placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function sendContact(event) {
+            event.preventDefault();
+            const nama = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const pesan = document.getElementById("message").value;
+
+            alert(`Terima kasih, ${nama}! Pesan kamu telah terkirim.\n\nKami akan segera menghubungi melalui ${email}.`);
+
+            // Reset form
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

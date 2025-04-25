@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Produk - TokoElegan</title>
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                TokoElegan
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="produk.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="live.html">Live-Chat</a></li>
+                <li><a href="kebijakan.html">Kebijakan</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="kontak.html">Contact</a></li> -->
+                <li><a href="login.html" class="btn">Login</a></li> <!-- Tombol Login disertakan di menu -->
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger Icon -->
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <a href="#home">Home</a> > <a href="#shop">Shop</a> > <span>Kategori Produk</span>
+    </section>
+    <div class="contact-page">
+        <h2>Hubungi Kami</h2>
+
+        <section class="contact-info">
+            <h3>Kontak Kami Langsung</h3>
+            <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan, silakan hubungi kami melalui saluran berikut:</p>
+
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:cs@tokokita.com">cs@tokokita.com</a></li>
+                <li><strong>Telepon:</strong> <a href="tel:+62123456789">+62 123 456 789</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/62123456789" target="_blank">+62 123 456 789</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h3>Formulir Kontak</h3>
+            <p>Jika Anda ingin mengirimkan pesan langsung, silakan isi formulir di bawah ini:</p>
+
+            <form action="/submit_contact" method="POST">
+                <label for="name">Nama Anda:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+
+        <section class="map">
+            <h3>Lokasi Kami</h3>
+            <p>Kunjungi kami di alamat berikut:</p>
+            <p>Jalan Raya No. 10, Jakarta, Indonesia</p>
+
+            <!-- Peta menggunakan iframe (Google Maps) -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12633.31413859196!2d106.8221446!3d-6.2101587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2eb88a925a7%3A0xdcd0a36d4b9c7fe!2sJalan%20Raya%20No.%2010%2C%20Jakarta%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1679123015501!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
